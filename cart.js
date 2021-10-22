@@ -34,9 +34,11 @@ const cart = [
 ]
 
 //CODE HERE
+const summedPrice = cart.reduce((acc, curr) => {
+    return acc + curr.price
+  }, 0)
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +56,11 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    return cartTotal * (1 + tax) - couponValue 
+}
 
-
+console.log(calcFinalPrice(200, 50, .07))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +84,9 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+        The customer object below shows four properties: name, age, id, and frequency. The customer name and id will be strings. The name will
+        be a string because names are in letters and contain spaces, while the id will be a string because it involves letters and numbers and this is easier to modulate. 
+        Age and frequency of visits will be the datatype numbers because they represent integers related to the customer's age group and how many times they've shopped with us before.
 */
 
 /*
@@ -88,3 +95,10 @@ const cart = [
 */
 
 //CODE HERE
+let newCustomer1 = {
+    name: "Casper Yonel", 
+    age: 23, 
+    id: "eru347",
+    frequency: 5,
+}
+console.log(newCustomer1)
