@@ -137,14 +137,27 @@ const deals = [
 */
 
 //CODE HERE
+// console.log(deals[0].title.replace(deals[0]))
+
+
+
+// deals.replace(deals[0].title("15%", "10%"))
+
+// console.log(deals)
+
+// newVar.replace("15% off!", "10% off!")
+
+// console.log(newVar)
+
+
 // let newVar = deals[0].title
 
 // newVar.replace("15%", "10%")
-deals[0].title = "15% off!"
+// deals[0].title = "15% off!"
 
-"15% off!".replace("15%", "10%")
+// "15% off!".replace("15%", "10%")
 
-console.log("15% off!")
+// console.log("15% off!")
 
 // deals[0].title.replace("15%", "10%")
 
@@ -178,4 +191,6 @@ console.log("15% off!")
 
 //CODE HERE
 
-deals.desc = ""
+deals[1].desc.replace.trim()("march", "april")
+
+console.log(deals)

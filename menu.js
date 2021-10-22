@@ -101,7 +101,48 @@ console.log(category)
 */
 
 //CODE HERE
-let foodArr = ["Rick's Pizza", 4, 78, 4.5, ["superCool", "Pasta", "Fresh"]]
+let foodArr = [
+    {
+        name: "Slab Pizza1",
+        price: 1.89,
+        category: "Pizza1",
+        popularity: 43,
+        rating: 1.6,
+        tags: ["Pizza5", "Cool5", "Delicious5"]
+    }, 
+    {
+        name: "Slab Pizza2",
+        price: 2.89,
+        category: "Pizza2",
+        popularity: 33,
+        rating: 2.6,
+        tags: ["Pizza4", "Cool4", "Delicious4"]
+    }, 
+    {
+        name: "Slab Pizza3",
+        price: 3.89,
+        category: "Pizza3",
+        popularity: 23,
+        rating: 3.6,
+        tags: ["Pizza3", "Cool3", "Delicious3"]
+    }, 
+    {
+        name: "Slab Pizza4",
+        price: 4.89,
+        category: "Pizza4",
+        popularity: 23,
+        rating: 4.6,
+        tags: ["Pizza2", "Cool2", "Delicious2"]
+    }, 
+    {
+        name: "Slab Pizza5",
+        price: 5.89,
+        category: "Pizza5",
+        popularity: 13,
+        rating: 5.6,
+        tags: ["Pizza1", "Cool1", "Delicious1"]
+    }
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -116,11 +157,11 @@ let foodArr = ["Rick's Pizza", 4, 78, 4.5, ["superCool", "Pasta", "Fresh"]]
 */
 
 //CODE HERE
-
-const filteredFood = foodArr.filter(element => {
-    return foodArr.includes(callback(element))
+const tagFilter = foodArr.filter(element => {
+    return element.tags.includes("Cool1")
 })
 
+console.log(tagFilter)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -164,6 +205,20 @@ const filteredFood = foodArr.filter(element => {
 //CODE HERE
 
 
+let newArray = []
+
+const filterByProperty = (property, number, type) => {
+    if (type === "above") {
+        return foodArr.filter(element => {
+            element.rating > number
+            return newArray.push(element)
+    })} else {
+        return foodArr.filter(element => {
+            element.rating < number
+            return newArray.push(element)
+    })} 
+}
+
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -172,3 +227,7 @@ const filteredFood = foodArr.filter(element => {
 */
 
 //CODE HERE
+
+filterByProperty("newLand", 4, "above")
+
+console.log(newArray)
