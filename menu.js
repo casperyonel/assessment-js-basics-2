@@ -204,10 +204,8 @@ console.log(tagFilter)
 
 //CODE HERE
 
-
-let newArray = []
-
 const filterByProperty = (property, number, type) => {
+    let newArray1 = []
     if (type === "above") {
         return foodArr.filter(element => {
             element.rating > number
