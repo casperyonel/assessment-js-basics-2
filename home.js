@@ -49,31 +49,16 @@ greetUser("Andrew")
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-// const canWeDeliver = zipCode => {
-//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-//         if (deliveryAreaZipCodes[i] === zipCode) {
-//             console.log("You're in our delivery zone!")
-//             break;
-//         } else {
-//             console.log("Sorry, we can't deliver to that address") 
-//         }
-//     }
-// }
-
-// canWeDeliver(85203)
-
 const canWeDeliver = zipCode => {
     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
         if (deliveryAreaZipCodes[i] === zipCode) {
             console.log("You're in our delivery zone!")
             break;
-        } else {
-            console.log("Sorry, we can't deliver to that address")
         }
     }
 }
 
-canWeDeliver(85204)
+canWeDeliver(85205)
 
 /* 
     Problem 2 Continued
@@ -137,44 +122,7 @@ const deals = [
 */
 
 //CODE HERE
-// console.log(deals[0].title.replace(deals[0]))
-
-
-
-// deals.replace(deals[0].title("15%", "10%"))
-
-// console.log(deals)
-
-// newVar.replace("15% off!", "10% off!")
-
-// console.log(newVar)
-
-
-// let newVar = deals[0].title
-
-// newVar.replace("15%", "10%")
-// deals[0].title = "15% off!"
-
-// "15% off!".replace("15%", "10%")
-
-// console.log("15% off!")
-
-// deals[0].title.replace("15%", "10%")
-
-// console.log(deals[0].title)
-
-
-
-// deals.title.replace("15%", "10%")
-
-// console.log(deals)
-
-// let newVar = deals[0].title
-
-// newVar.replace("15%", "10%")
-
-// console.log(newVar)
-
+console.log(deals[0]["title"].replace('5', '0'))
 
 /*
     The restaurant is going to continue its
@@ -189,8 +137,5 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
-
-deals[1].desc.replace.trim()("march", "april")
-
-console.log(deals)
+// //CODE HERE
+console.log(deals[1]["desc"].replace('March', 'April').trim())
