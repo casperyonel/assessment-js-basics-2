@@ -203,19 +203,32 @@ console.log(tagFilter)
 */
 
 //CODE HERE
-
-const filterByProperty = (property, number, type) => {
-    let newArray1 = []
-    if (type === "above") {
-        return foodArr.filter(element => {
-            element.rating > number
-            return newArray.push(element)
-    })} else {
-        return foodArr.filter(element => {
-            element.rating < number
-            return newArray.push(element)
-    })} 
+const filterByProperty1 = (property, number, type) => {
+    const filteredFood = foodArr.filter((element) => {
+        if (type === "above") {
+            return element[property] >= number
+        } else if (type === "below") {
+            return element [property] <= number
+        }
+    })
+    return filteredFood
 }
+
+// Property is a key value from the objects, not a number. Also need to reference by bracket notation instead of dot.
+
+
+// const filterByProperty = (property, number, type) => {
+//     let newArray1 = []
+//     if (type === "above") {
+//         return foodArr.filter(element => {
+//             element.rating > number
+//             return newArray.push(element)
+//     })} else {
+//         return foodArr.filter(element => {
+//             element.rating < number
+//             return newArray.push(element)
+//     })} 
+// }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -225,7 +238,5 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
-
-filterByProperty("newLand", 4, "above")
-
-console.log(newArray)
+filterByProperty1("rating", 5, "above")
+console.log(filteredFood)

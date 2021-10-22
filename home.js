@@ -123,7 +123,13 @@ const deals = [
 */
 
 //CODE HERE
-console.log(deals[0]["title"].replace('5', '0'))
+// console.log(deals[0]["title"].replace('5', '0'))
+
+deals[0]["title"] = deals[0]["title"].replace('5', '0')
+
+console.log(deals[0]["title"])
+
+// Replace doesn't store it into memory, that's why you set it equal to itself.
 
 /*
     The restaurant is going to continue its
