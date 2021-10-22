@@ -239,4 +239,3 @@ const filterByProperty1 = (property, number, type) => {
 
 //CODE HERE
 filterByProperty1("rating", 5, "above")
-console.log(filteredFood)
